@@ -3,7 +3,8 @@ FROM ruby:2.3-alpine
 ENV VERSION=v0.10.48 CFLAGS="-D__USE_MISC" NPM_VERSION=2
 # ENV VERSION=v0.12.17 NPM_VERSION=2
 # ENV VERSION=v4.6.1 NPM_VERSION=2
-ENV VERSION=v6.1.0 NPM_VERSION=3
+# workaround for https://github.com/npm/npm/issues/14042
+ENV VERSION=v6.1.0 NPM_VERSION=3.10.7
 
 # For base builds
 # ENV CONFIG_FLAGS="--without-npm" RM_DIRS=/usr/include

@@ -7,4 +7,4 @@ FROM quay.io/apstndb/alpine-node-rails:node-6.1-base
 # linux-headers は sys/types.h が必要なもののため
 # wercker require bash
 RUN apk --no-cache add gcc git g++ imagemagick-dev make musl-dev mysql-dev \
-    python linux-headers tzdata bash
+    python linux-headers tzdata bash ca-certificates curl openssl
